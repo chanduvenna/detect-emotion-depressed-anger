@@ -65,7 +65,7 @@ def load_or_train_model(model_path):
     except FileNotFoundError:
         print("Model not found. Training a new model...")
 
-        # Load and preprocess data (assuming your data is in a CSV named "newdataset.csv")
+        # Load and preprocess data 
         try:
             data = pd.read_csv("newdataset.csv")
             data['processed_content'] = data['Original Content'].apply(lambda x: clean_text(x))
